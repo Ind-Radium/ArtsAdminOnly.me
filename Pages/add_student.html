@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting</title>
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/add_student.css">
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .design-top {
+            text-align: center;
+            background: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .timer-section {
+            font-size: 48px;
+            color: #ff4500;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .timer {
+            display: inline-block;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 50%;
+            border: 2px solid #ff4500;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="design-top">
+        <h1>You will be redirected to the form page in:</h1>
+        <div class="timer-section">
+            <div class="timer">
+                <p id="num">5</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let countdown = 5; // Initialize countdown timer
+        const timerElement = document.getElementById("num");
+
+        // Create a function to update the timer every second
+        const updateTimer = () => {
+            timerElement.textContent = countdown; // Update the displayed number
+            countdown--;
+
+            // Redirect to the form page after countdown ends
+            if (countdown == 0) {
+                window.location.href = "https://ind-radium.github.io/ArtsAcademy.in"; // Replace with your form's URL
+            }
+        };
+
+        // Run the updateTimer function every second
+        setInterval(updateTimer, 800);
+    </script>
+</body>
+
+</html>
