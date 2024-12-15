@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>View Batches</title>
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/view_batches.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="search-section">
+            <input type="text" class="search-bar" placeholder="Search by Name">
+            <input type="text" class="search-bar small" placeholder="Search by Class">
+            <button class="search-button">Search</button>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Content goes here -->
+    </main>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerMenu.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebar-visible');
+        });
+    </script>
 </body>
 </html>
