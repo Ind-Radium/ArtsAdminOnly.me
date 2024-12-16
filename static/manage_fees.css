@@ -1,12 +1,5 @@
-@font-face {
-    font-family: 'Poppins';
-    src: url('fonts/Poppins-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
 
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
@@ -16,19 +9,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .heading-section {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     padding: 20px 30px;
     margin-bottom: 40px;
-    max-width: 80%;
+    max-width: fit-content;
+    width: 100vh;
     border-radius: 20px;
     text-align: center;
     background: linear-gradient(135deg, #4caf50, #81c784);
     color: white;
     font-size: 1.8rem;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .buttons-section {
@@ -44,9 +41,11 @@ body {
     padding: 20px 50px; /* Adjusted padding for consistent sizing */
     width: 100%;
     max-width: 400px;
+    max-height: 6%;
+    height: 100vh;
     border-radius: 25px;
     text-align: center;
-    background: linear-gradient(135deg, #ff5722, #ff8a50);
+    background: linear-gradient(135deg, #051a53, #a14e24);
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
@@ -62,7 +61,7 @@ body {
 .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #e64a19, #ff7043);
+    background: linear-gradient(135deg, #86e619, #ff7043);
 }
 
 .button:active {
